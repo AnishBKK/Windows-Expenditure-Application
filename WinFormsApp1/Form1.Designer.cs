@@ -32,6 +32,9 @@
             AddEntryButtn = new Button();
             ShowEntryButtn = new Button();
             groupBox1 = new GroupBox();
+            radioButton2 = new RadioButton();
+            radioButton1 = new RadioButton();
+            label5 = new Label();
             DataEnterButtn = new Button();
             textBox2 = new TextBox();
             label4 = new Label();
@@ -52,11 +55,10 @@
             label1.MinimumSize = new Size(0, 50);
             label1.Name = "label1";
             label1.Padding = new Padding(50, 0, 50, 0);
-            label1.Size = new Size(535, 55);
+            label1.Size = new Size(530, 55);
             label1.TabIndex = 0;
-            label1.Text = "Expenditure Tracking";
+            label1.Text = "Transaction Tracking";
             label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click;
             // 
             // AddEntryButtn
             // 
@@ -82,6 +84,9 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(radioButton2);
+            groupBox1.Controls.Add(radioButton1);
+            groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(DataEnterButtn);
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(label4);
@@ -96,7 +101,42 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
             groupBox1.Visible = false;
-            groupBox1.Enter += groupBox1_Enter;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Font = new Font("Comic Sans MS", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            radioButton2.Location = new Point(495, 306);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(98, 29);
+            radioButton2.TabIndex = 11;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Income";
+            radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Font = new Font("Comic Sans MS", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            radioButton1.Location = new Point(378, 305);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(107, 29);
+            radioButton1.TabIndex = 10;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Expense";
+            radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Comic Sans MS", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(6, 290);
+            label5.Name = "label5";
+            label5.Size = new Size(336, 45);
+            label5.TabIndex = 9;
+            label5.Text = "Type of Transaction";
             // 
             // DataEnterButtn
             // 
@@ -111,7 +151,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(245, 175);
+            textBox2.Location = new Point(245, 137);
             textBox2.Name = "textBox2";
             textBox2.PlaceholderText = "Enter Expentiture Name";
             textBox2.Size = new Size(433, 31);
@@ -121,7 +161,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Comic Sans MS", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(6, 161);
+            label4.Location = new Point(6, 123);
             label4.Name = "label4";
             label4.Size = new Size(203, 45);
             label4.TabIndex = 7;
@@ -129,18 +169,17 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(245, 301);
+            textBox1.Location = new Point(245, 223);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Enter Amount";
             textBox1.Size = new Size(433, 31);
             textBox1.TabIndex = 6;
-            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Comic Sans MS", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(6, 288);
+            label3.Location = new Point(6, 209);
             label3.Name = "label3";
             label3.Size = new Size(233, 45);
             label3.TabIndex = 5;
@@ -166,11 +205,11 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(262, 176);
+            dataGridView1.Location = new Point(125, 550);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(703, 664);
+            dataGridView1.Size = new Size(815, 696);
             dataGridView1.TabIndex = 4;
             dataGridView1.Visible = false;
             // 
@@ -186,7 +225,6 @@
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
-            Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -208,5 +246,8 @@
         private Button DataEnterButtn;
         private TextBox textBox2;
         private DataGridView dataGridView1;
+        private Label label5;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
     }
 }
