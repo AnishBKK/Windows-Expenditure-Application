@@ -78,7 +78,7 @@ namespace WinFormsApp1
                         bal = bal + amt;
                     }
 
-                    SqlCommand update = new SqlCommand(@"UPDATE [dbo].[Expenditure] SET [balance] = '"+bal+"' WHERE value = '"+textBox2.Text+"'", con);
+                    SqlCommand update = new SqlCommand(@"UPDATE [dbo].[Expenditure] SET [balance] = '" + bal + "' WHERE value = '" + textBox2.Text + "'", con);
                     update.ExecuteNonQuery();
 
                     MessageBox.Show("Data Entered Successfully");

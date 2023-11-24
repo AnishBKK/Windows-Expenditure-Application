@@ -51,6 +51,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Comic Sans MS", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ButtonHighlight;
             label1.Location = new Point(339, 9);
             label1.MinimumSize = new Size(0, 50);
             label1.Name = "label1";
@@ -62,28 +63,31 @@
             // 
             // AddEntryButtn
             // 
+            AddEntryButtn.BackColor = SystemColors.ActiveCaption;
             AddEntryButtn.Font = new Font("Comic Sans MS", 9F, FontStyle.Bold, GraphicsUnit.Point);
             AddEntryButtn.Location = new Point(95, 80);
             AddEntryButtn.Name = "AddEntryButtn";
             AddEntryButtn.Size = new Size(180, 75);
             AddEntryButtn.TabIndex = 1;
             AddEntryButtn.Text = "Add Entry";
-            AddEntryButtn.UseVisualStyleBackColor = true;
+            AddEntryButtn.UseVisualStyleBackColor = false;
             AddEntryButtn.Click += AddEntryButtn_Click;
             // 
             // ShowEntryButtn
             // 
+            ShowEntryButtn.BackColor = SystemColors.ActiveCaption;
             ShowEntryButtn.Font = new Font("Comic Sans MS", 9F, FontStyle.Bold, GraphicsUnit.Point);
             ShowEntryButtn.Location = new Point(947, 80);
             ShowEntryButtn.Name = "ShowEntryButtn";
             ShowEntryButtn.Size = new Size(180, 75);
             ShowEntryButtn.TabIndex = 2;
             ShowEntryButtn.Text = "View Entry";
-            ShowEntryButtn.UseVisualStyleBackColor = true;
+            ShowEntryButtn.UseVisualStyleBackColor = false;
             ShowEntryButtn.Click += ShowEntryButtn_Click;
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = SystemColors.GradientActiveCaption;
             groupBox1.Controls.Add(radioButton2);
             groupBox1.Controls.Add(radioButton1);
             groupBox1.Controls.Add(label5);
@@ -204,8 +208,10 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.GradientActiveCaption;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(125, 550);
+            dataGridView1.GridColor = SystemColors.InactiveBorder;
+            dataGridView1.Location = new Point(201, 161);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
@@ -217,6 +223,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(1234, 912);
             Controls.Add(dataGridView1);
             Controls.Add(groupBox1);
